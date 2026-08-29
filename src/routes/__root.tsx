@@ -37,22 +37,22 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HappySeeds" },
+      { title: "PartPulse — AI Auto Parts Marketplace" },
       {
         name: "description",
         content:
-          "The future of building is here. HappySeeds uses an agentic layer to bridge the gap between intent and code. High-fidelity UI, zero friction. Grow what you feel today.",
+          "Describe or show a part, get it parsed by AI, and receive live price bids from verified auto parts suppliers in real time.",
       },
-      { property: "og:title", content: "HappySeeds" },
+      { property: "og:title", content: "PartPulse — AI Auto Parts Marketplace" },
       {
         property: "og:description",
         content:
-          "The future of building is here. HappySeeds uses an agentic layer to bridge the gap between intent and code. High-fidelity UI, zero friction. Grow what you feel today.",
+          "Describe or show a part, get it parsed by AI, and receive live price bids from verified auto parts suppliers in real time.",
       },
       {
         name: "keywords",
         content:
-          "HappySeeds, VibeCoding, AI Agents, Software Engineering, SaaS Builder, UI-First Development",
+          "auto parts, B2B procurement, RFQ, live bidding, AI parsing, supplier marketplace, brake pads, auto parts supplier",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "HappySeeds" },
@@ -68,7 +68,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
