@@ -111,6 +111,24 @@ Copy `.env.example` to `.env` and fill in what you need. Keys are never committe
 
 ---
 
+## 🔄 CI/CD pipeline
+
+The repository ships with GitHub Actions workflows in `.github/workflows/`:
+
+- **`ci.yml` — Continuous Integration.** Runs on every push and pull request: installs dependencies, lints, type-checks and produces a production build. Failing PRs are caught before they ever reach `main`.
+- **`deploy.yml` — Continuous Deployment.** Runs automatically on every push to `main` (and can be triggered manually from the Actions tab). It type-checks, builds, then deploys the app to **Cloudflare Workers** using the official `cloudflare/wrangler-action`.
+
+To enable deploys, add two repository secrets (Settings → Secrets and variables → Actions):
+
+| Secret | Purpose |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare API token (create in the dashboard with **Workers Scripts: Edit** permission) |
+| `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID |
+
+Once those are set, every merge to `main` ships the app automatically.
+
+---
+
 ## 🧑‍💻 Developer
 
 Developed by **Aymen Rouagha**.
